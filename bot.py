@@ -19,7 +19,7 @@ GUARD_CHANNEL_ID = int(os.getenv("GUARD_CHANNEL_ID", "1570087256050507956"))
 LOG_CHANNEL_ID = int(os.getenv("LOG_CHANNEL_ID", "0"))
 AUTO_ROLE_ID = int(os.getenv("AUTO_ROLE_ID", "0"))
 
-with (BASE_DIR / "words.json").open("r", encoding="utf-8") as file:
+with (BASE_DIR / "guard_config.json").open("r", encoding="utf-8") as file:
     WORDS = json.load(file)
 
 GUARD_CONFIG_PATH = BASE_DIR / "guard_config.json"
