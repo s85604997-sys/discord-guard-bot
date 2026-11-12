@@ -75,7 +75,7 @@ def stylize(name: str) -> str:
 def make_nickname() -> str:
     for _ in range(100):
         count = random.choices([1, 2, 3], weights=[12, 78, 10], k=1)[0]
-        chosen = random.sample(WORDS, count)
+        chosen = random.sample(list(WORDS), count)
         candidate = stylize("".join(chosen))
         if 3 <= len(candidate) <= 15 and re.fullmatch(r"[a-z0-9]+", candidate):
             return candidate
